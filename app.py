@@ -14,3 +14,16 @@ def get_data():
 def login_user_api():
     # Get the email and password from the request
     return "at login page"
+
+@app.route('/login', methods=['POST'])
+def login():
+    # Parse input data from the request
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
+
+    # Print email and password for debugging
+    print(f"Email: {email}, Password: {password}")
+
+    # Return email and password as a response
+    return jsonify({"email": email, "password": password}), 200
