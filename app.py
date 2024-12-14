@@ -10,7 +10,7 @@ def get_data():
     """API route to send data to the Next.js frontend"""
     return jsonify({"message": "Hello from Flask nnn!"})
 
-@app.route('/api/login', methods=['POST'])
+@app.route('/api/login', methods=['POST','GET'])
 def login_user_api():
     # Get the email and password from the request
-    return jsonify({'success'}), 200
+    return "at login page"
